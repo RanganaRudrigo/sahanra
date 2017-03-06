@@ -22,7 +22,8 @@ image_upload = {
                 disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
                 previewMaxWidth: 220,
                 previewMaxHeight: 220,
-                previewCrop: !0
+                previewCrop: 0  ,
+                prependFiles : 1
             }).on("fileuploadsubmit", function (e, a) {
                 var i = $("#image_upload");
                 return a.formData = {files: i.data(a)}, a.formData.files ? void 0 : (i.focus(), !1)
@@ -71,7 +72,8 @@ image_upload = {
             disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
             previewMaxWidth: 220,
             previewMaxHeight: 220,
-            previewCrop: !0
+            previewCrop: 0,
+            prependFiles : 1
         }).on("fileuploadsubmit", function (e, a) {
             var i = $(".image_upload");
             return a.formData = {files: i.data(a)}, a.formData.files ? void 0 : (i.focus(), !1)

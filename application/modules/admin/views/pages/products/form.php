@@ -1,5 +1,6 @@
 <?php $this->view('includes/header_start.php'); ?>
 <!-- extra css start -->
+<link href="<?=base_url('assets/plugins/jquery.filer/css/jquery.filer.css')?>" rel="stylesheet" />
 <!-- extra css end -->
 <?php $this->view('includes/header_end.php'); ?>
 
@@ -48,42 +49,45 @@
                                                        value="<?= $obj->ProductTitle ?>"
                                                        class="form-control" >
                                             </div>
-                                        </div>
-
-                                        <div class="col-lg-6" >
-                                            <div class="form-group">
-                                                <label> Product Default Image  <small> image size ( 570px * 686px ) </small>  </label>
-                                            </div>
-                                            <div class="fileinput-button btn btn-success sepH_b">
-                                                <i class="fa fa-plus"></i>
-                                                <span> Add file </span>
-                                                <input class="image_upload" data-for="#default_img_grid_upload"  data-name="Image"  type="file" name="userfile">
-                                            </div>
-                                            <input   type="hidden" name="form[Image]"   value="">
-                                            <ul class="img-grid2 img-grid  clearfix" id="default_img_grid_upload">
-                                                <?php if ($obj->Image): ?>
-                                                    <li>
-                                                        <div class="upload_img_single thumbnail">
-                                                            <img src="<?= UPT. $obj->Image ?>"
-                                                                 class="thumbnail img-responsive" alt=""/>
-                                                            <div class="upload_img_actions">
-                                                                <span class=" fa fa-times pull-right btn  btn-danger  "
-                                                                      onclick="image_upload.remove($(this))"> </span>
-                                                                <input
-                                                                    type="hidden" name="form[Image]"
-                                                                    value="<?= $obj->Image ?>"></div>
-                                                        </div>
-                                                    </li>
-                                                <?php endif; ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row" >
-                                        <div class="col-lg-12" >
                                             <div class="form-group">
                                                 <label for="description">Short Description</label>
                                                 <textarea  rows="5" name="form[ShortDescription]"  class="form-control" ><?= $obj->ShortDescription ?></textarea>
                                             </div>
+                                        </div>
+
+                                        <div class="col-lg-6" >
+                                            <div class="form-group">
+                                                <label>  Default Image  <small> image size ( 570px * 686px ) </small>  </label>
+                                            </div>
+
+                                            <ul class="jFiler-items-list jFiler-items-grid" >
+                                                <li class="jFiler-item " >
+                                                    <div class="jFiler-item-container">
+                                                        <div class="jFiler-item-inner">
+                                                            <div class="jFiler-item-thumb">
+                                                                <div class="jFiler-item-status"></div>
+                                                                <div class="jFiler-item-thumb-image">
+                                                                    <img
+                                                                        src="<?= $obj->Image ? UPT. $obj->Image : base_url('assets/images/default.png') ?>" draggable="false">
+                                                                    <input   type="hidden" name="form[Image]"   value="<?= $obj->Image ?>">
+                                                                </div>
+                                                            </div>
+                                                            <div class="jFiler-item-assets jFiler-row">
+                                                                <ul class="list-inline pull-left">
+                                                                    <li>
+                                                                        <span class="jFiler-item-others">
+                                                                            <i class="icon-jfi-file-image jfi-file-ext-jpg"></i></span>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="list-inline pull-right">
+                                                                    <li><a class="icon-jfi-trash jFiler-item-trash-action"></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="row" >
@@ -92,33 +96,6 @@
                                                 <label for="description">Description</label>
                                                 <textarea id="description" rows="5" name="form[Description]"  class="form-control" ><?= $obj->Description ?></textarea>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6" >
-                                            <div class="form-group">
-                                                <label> Banner Image  <small> image size (  1920px * 1280px ) </small>  </label>
-                                            </div>
-                                            <div class="fileinput-button btn btn-success sepH_b">
-                                                <i class="fa fa-plus"></i>
-                                                <span> Add file </span>
-                                                <input class="image_upload" data-for="#default_BannerImage"  data-name="BannerImage"  type="file" name="userfile">
-                                            </div>
-                                            <input   type="hidden" name="form[BannerImage]"   value="">
-                                            <ul class="img-grid2 img-grid  clearfix" id="default_BannerImage">
-                                                <?php if ($obj->BannerImage): ?>
-                                                    <li>
-                                                        <div class="upload_img_single thumbnail">
-                                                            <img src="<?= UPT. $obj->BannerImage ?>"
-                                                                 class="thumbnail img-responsive" alt=""/>
-                                                            <div class="upload_img_actions">
-                                                                <span class=" fa fa-times pull-right btn  btn-danger  "
-                                                                      onclick="image_upload.remove($(this))"> </span>
-                                                                <input
-                                                                    type="hidden" name="form[BannerImage]"
-                                                                    value="<?= $obj->BannerImage ?>"></div>
-                                                        </div>
-                                                    </li>
-                                                <?php endif; ?>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -130,24 +107,40 @@
                     </div>
 
                     <div class="card-box" >
-                        <h4 class="header-title m-t-0 m-b-30">More Images <small> image size (938px * 450px )</small> </h4>
+                        <h4 class="header-title m-t-0 m-b-30">More Images <small> image size (938px * 450px )</small> <i class="fa fa-plus btn btn-primary add-more-image" data-for="#more_image" data-image-name="image[]" ></i> </h4>
 
                         <div class="row " >
-                            <div class="fileinput-button btn btn-success sepH_b">
-                                <i class="fa fa-plus"></i>
-                                <span>Add files...</span>
-                                <input id="image_upload" type="file" name="userfile" multiple>
-                            </div>
-
-                            <ul class="img-grid clearfix" id="img_grid_upload">
+                            <ul id="more_image" class="jFiler-items-list jFiler-items-grid" >
                                 <?php $MoreImage = (array) json_decode($obj->MoreImage); ?>
                                 <?php foreach ( $MoreImage as $img): ?>
-                                    <li class="upload_img_single  thumbnail"  >
-                                        <img  src="<?= UPT. $img ?>"  class="thumbnail img-responsive" alt=""/>
-                                        <div class="upload_img_actions">
-                                                     <span class=" fa fa-times pull-right btn  btn-danger  "
-                                                           onclick="image_upload.remove($(this))"> </span>
-                                            <input type="hidden" name="image[]"  value="<?= $img ?>">
+                                    <li class="jFiler-item " >
+                                        <div class="jFiler-item-container">
+                                            <div class="jFiler-item-inner">
+                                                <div class="jFiler-item-thumb">
+                                                    <div class="jFiler-item-status"></div>
+                                                    <div class="jFiler-item-thumb-image">
+                                                        <img
+                                                            src="<?= UPT. $img ?>" draggable="false">
+                                                        <input   type="hidden" name="image[]"   value="<?=$img  ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="jFiler-item-assets jFiler-row">
+                                                    <ul class="list-inline pull-left">
+                                                        <li>
+                                                                        <span class="jFiler-item-others">
+                                                                            <i class="icon-jfi-file-image jfi-file-ext-jpg"></i></span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="list-inline pull-right">
+                                                        <li><a class="icon-jfi-times jFiler-item-times-action text-danger"></a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="list-inline pull-right">
+                                                        <li><a class="icon-jfi-trash jFiler-item-trash-action"></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </li>
                                 <?php endforeach; ?>
@@ -240,14 +233,7 @@
 <script src="<?= base_url() ?>assets/ckeditor/ckeditor.js"></script>
 <script src="<?= base_url() ?>assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-<!-- multiupload -->
-<script src="<?= base_url() ?>assets/plugins/jQuery-UI/jquery.ui.widget.min.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/extras/load-image.min.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
-<script src="<?= base_url() ?>assets/js/uploader.js"></script>
+<script src="<?= base_url() ?>assets/js/image-selector.js"></script>
 
 <!-- extra js end -->
 <?php $this->view('includes/footer_end.php') ?>

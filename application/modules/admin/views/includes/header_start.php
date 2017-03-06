@@ -15,6 +15,7 @@
     <!-- Switchery css -->
     <link href="<?=base_url('assets/plugins/switchery/switchery.min.css')?>" rel="stylesheet" />
     <script type="text/javascript" > 
+        var Base = "<?=base_url()?>";
         var BaseUrl = "<?=base_url()?>admin/";
         var Api = "<?=base_url()?>api/";
     </script>

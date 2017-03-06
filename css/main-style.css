@@ -1,0 +1,72 @@
+.block.less-space {
+    padding: 55px 0;
+}
+
+.block {
+    float: left;
+    width: 100%;
+    padding: 110px 0;
+    position: relative;
+}
+
+.fixed-bg.stop {
+    background-attachment: scroll!important;
+}
+
+.bg1 {
+    background-image: url(../images/resource/parallax1.jpg);
+}
+
+.fixed-bg {
+    background-attachment: fixed !important;
+    background-size: cover!important;
+}
+
+.fixed-bg {
+    background-size: cover!important;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.block .container {
+    padding: 0;
+}
+.white-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 40px;
+    margin: 18px 0 0;
+}
+
+.no-js .owl-carousel {
+    display: block;
+}
+
+.owl-carousel {
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+.elegent-title:before  {
+    background-color: #00abc9;
+}
+
+.coloured:before {
+    background: #0b0b0b none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    opacity: 0.77;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

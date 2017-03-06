@@ -741,3 +741,55 @@ ul.dropdown-menu .divider {
     font-weight: bold;
     color: #FFF;
 }
+.jFiler-items-grid .jFiler-item {
+    list-style: none;
+}
+
+.draggable-model {
+    z-index: 9999;
+    border-radius: 5px;
+    position: absolute;
+    top:100px;
+    left: 400px;
+    width: 800px;
+    height: 500px;
+    border: 1px solid #c3110a;
+}
+.draggable-model:active {
+    cursor: move;
+}
+.draggable-model .header {
+    padding: 5px;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #c3110a;
+    border-color: #c3110a;
+}
+.draggable-model .body {
+    background-color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 92%;
+    padding: 5px;
+    overflow-x: scroll ;
+    overflow-y: scroll ;
+}
+.draggable-model .body i {
+   margin: 200px 350px ;
+}
+.draggable-model .body .upload_img_single   {
+    width:115px !important;
+    height:115px !important;
+    margin: 5px;
+}
+.draggable-model .body .img-grid li  {
+    padding: 0  !important;
+    width:115px !important;
+}
+.draggable-model .body .img-grid li img {
+    width:110px !important;
+    height:110px !important;
+}
+.draggable-model .body .thumbnail {
+    margin : 5px  !important;
+}

@@ -2,51 +2,34 @@
 <html class="no-js" lang="">
 <head>
     <?php $this->view('inc/meta') ?>
-    <!-- Google Fonts
-    ============================================ -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- css file -->
+    <link rel="stylesheet" href="<?=base_url('css/bootstrap.min.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('css/style.css')?>">
+    <link rel="stylesheet" href="<?=base_url('css/menuzord-border-bottom.css')?>"  />
+    <link rel="stylesheet" href="<?=base_url('css/main-style.css')?>"  />
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="<?=base_url('css/responsive.css')?>">
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/settings.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/layers.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/font-awesome.min.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/font-awesome-animation.min.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/jquery-ui.min.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/animate.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/owl.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/isotop.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/magnific-popup.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/menuzord.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/modernizr.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/hover.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/timecounter.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/fancyBox.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/prettyphoto.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/jquery.mCustomScrollbar.min.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/jquery.circliful.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/fonticon-et-line.css')?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('css/fonticon-linearicons.css')?>" />
 
-    <!-- Bootstrap CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/bootstrap.min.css">
-
-    <!-- Fontawsome CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/font-awesome.min.css">
-
-    <!-- owl.carousel CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/owl.carousel.css">
-
-    <!-- jquery-ui CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/jquery-ui.css">
-
-    <!-- meanmenu CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/meanmenu.min.css">
-
-    <!-- animate CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/animate.css">
-
-    <!-- nivo slider CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('lib') ?>/nivo-slider/css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="<?= base_url('lib') ?>/nivo-slider/css/preview.css" type="text/css" media="screen" />
-
-    <!-- style CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/style.css">
-
-    <!-- responsive CSS
-    ============================================ -->
-    <link rel="stylesheet" href="<?= base_url('css') ?>/responsive.css">
-
-    <!-- modernizr JS
-    ============================================ -->
-    <script src="<?= base_url('js') ?>/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -72,53 +55,44 @@
 <?php $this->view('inc/footer') ?>
 
 
-<!-- jquery
-============================================ -->
-<script src="<?= base_url('js') ?>/vendor/jquery-1.12.3.min.js"></script>
+<!--External Script-->
+<script type="text/javascript" src="<?=base_url('js/jquery.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery-ui.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/bootstrap.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/scrollto.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/SmoothScroll.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery.knob.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/modernizr.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery-scrolltofixed-min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/menuzord.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/isotope.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/stellar.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery.fitvids.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/wow.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/owl.carousel.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/timepicker.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery.magnific-popup.min.js')?>"></script>
+<!-- Some of Jquery Plugin -->
+<script type="text/javascript" src="<?=base_url('js/jquery.circliful.js')?>"></script>
+<!-- REVOLUTION JS FILES -->
+<script type="text/javascript" src="<?=base_url('js/jquery.themepunch.tools.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/jquery.themepunch.revolution.min.js')?>"></script>
+<!-- Custom script for all pages -->
+<script type="text/javascript" src="<?=base_url('js/script.js')?>"></script>
 
-<!-- bootstrap JS
-============================================ -->
-<script src="<?= base_url('js') ?>/bootstrap.min.js"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+		(Load Extensions only on Local File Systems !
+		 The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.actions.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.carousel.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.kenburn.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.layeranimation.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.migration.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.navigation.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.parallax.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.slideanims.min.js')?>"></script>
+<script type="text/javascript" src="<?=base_url('js/revolution.extension.video.min.js')?>"></script>
 
-<!-- nivo slider js
-============================================ -->
-<script src="<?= base_url('lib') ?>/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-<script src="<?= base_url('lib') ?>/nivo-slider/home.js" type="text/javascript"></script>
 
-<!-- wow JS
-============================================ -->
-<script src="<?= base_url('js') ?>/wow.min.js"></script>
-
-<!-- price-slider JS
-============================================ -->
-<script src="<?= base_url('js') ?>/jquery-price-slider.js"></script>
-
-<!-- meanmenu JS
-============================================ -->
-<script src="<?= base_url('js') ?>/jquery.meanmenu.js"></script>
-
-<!-- owl.carousel JS
-============================================ -->
-<script src="<?= base_url('js') ?>/owl.carousel.min.js"></script>
-
-<!-- scrollUp JS
-============================================ -->
-<script src="<?= base_url('js') ?>/jquery.scrollUp.min.js"></script>
-
-<!-- Waypoints JS
-============================================ -->
-<script src="<?= base_url('js') ?>/waypoints.min.js"></script>
-
-<!-- Counter Up JS
-============================================ -->
-<script src="<?= base_url('js') ?>/jquery.counterup.min.js"></script>
-
-<!-- plugins JS
-============================================ -->
-<script src="<?= base_url('js') ?>/plugins.js"></script>
-
-<!-- main JS
-============================================ -->
-<script src="<?= base_url('js') ?>/main.js"></script>
 </body>
 </html>

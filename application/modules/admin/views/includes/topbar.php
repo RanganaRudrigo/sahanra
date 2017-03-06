@@ -4,7 +4,8 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <a href="<?= base_url() ?>" class="logo" id="logo-tour">
-            <span><?= title ?></span></a>
+            <span><?= title ?> <?= $this->session->userdata('lang') == 'si' ? "Sinhala" :
+                    ( $this->session->userdata('lang') == 'tn' ? "Tamil" : "English" ) ?> </span> </a>
     </div>
 
 
@@ -35,8 +36,16 @@
                     </div>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <i class="zmdi zmdi-settings"></i> <span>Settings</span>
+                    <a href="<?=base_url('admin/home/lag/en')?>" class="dropdown-item notify-item">
+                        <i class="zmdi zmdi-settings"></i> <span>English</span>
+                    </a>
+                    <!-- item-->
+                    <a href="<?=base_url('admin/home/lag/tn')?>" class="dropdown-item notify-item">
+                        <i class="zmdi zmdi-settings"></i> <span>Tamil</span>
+                    </a>
+                    <!-- item-->
+                    <a href="<?=base_url('admin/home/lag/si')?>" class="dropdown-item notify-item">
+                        <i class="zmdi zmdi-settings"></i> <span>Sinhala</span>
                     </a>
 
 

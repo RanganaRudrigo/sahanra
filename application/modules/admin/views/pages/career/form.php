@@ -1,5 +1,6 @@
 <?php $this->view('includes/header_start.php'); ?>
 <!-- extra css start -->
+<link href="<?=base_url('assets/plugins/jquery.filer/css/jquery.filer.css')?>" rel="stylesheet" />
 <!-- extra css end -->
 <?php $this->view('includes/header_end.php'); ?>
 
@@ -70,31 +71,33 @@
                                             <div class="form-group">
                                                 <label> Career Default Image  <small> image size ( 1920px * 1280px ) </small>  </label>
                                             </div>
-                                            <div class="fileinput-button btn btn-success sepH_b">
-                                                <i class="fa fa-plus"></i>
-                                                <span> Add file </span>
-                                                <input class="image_upload" data-for="#default_img_grid_upload"  data-name="Image"  type="file" name="userfile">
-                                            </div>
-                                            <input   type="hidden" name="form[Image]"   value="">
-                                            <ul class="img-grid2 img-grid  clearfix" id="default_img_grid_upload">
-                                                <?php if ($obj->Image): ?>
-                                                    <li>
-                                                        <div class="upload_img_single thumbnail">
-                                                            <img src="<?= UPT. $obj->Image ?>"
-                                                                 class="thumbnail img-responsive" alt=""/>
-                                                            <div class="upload_img_actions">
-                                                                <span class=" fa fa-times pull-right btn  btn-danger  "
-                                                                      onclick="image_upload.remove($(this))"> </span>
-                                                                <a style="color: white"
-                                                                   href="<?=  UP. $obj->Image ?>"
-                                                                   class="fa fa-search-plus pull-right btn  btn-success">
-                                                                </a>
-                                                                <input
-                                                                    type="hidden" name="form[Image]"
-                                                                    value="<?= $obj->Image ?>"></div>
+                                            <ul class="jFiler-items-list jFiler-items-grid" >
+                                                <li class="jFiler-item " >
+                                                    <div class="jFiler-item-container">
+                                                        <div class="jFiler-item-inner">
+                                                            <div class="jFiler-item-thumb">
+                                                                <div class="jFiler-item-status"></div>
+                                                                <div class="jFiler-item-thumb-image">
+                                                                    <img
+                                                                        src="<?= $obj->Image ? UPT. $obj->Image : base_url('assets/images/default.png') ?>" draggable="false">
+                                                                    <input   type="hidden" name="form[Image]"   value="<?= $obj->Image ?>">
+                                                                </div>
+                                                            </div>
+                                                            <div class="jFiler-item-assets jFiler-row">
+                                                                <ul class="list-inline pull-left">
+                                                                    <li>
+                                                                        <span class="jFiler-item-others">
+                                                                            <i class="icon-jfi-file-image jfi-file-ext-jpg"></i></span>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="list-inline pull-right">
+                                                                    <li><a class="icon-jfi-trash jFiler-item-trash-action"></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
-                                                    </li>
-                                                <?php endif; ?>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -146,14 +149,7 @@
 <!-- extra js start -->
 <script src="<?= base_url() ?>assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-<!-- multiupload -->
-<script src="<?= base_url() ?>assets/plugins/jQuery-UI/jquery.ui.widget.min.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/extras/load-image.min.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
-<script src="<?= base_url() ?>assets/plugins/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
-<script src="<?= base_url() ?>assets/js/uploader.js"></script>
+<script src="<?= base_url() ?>assets/js/image-selector.js"></script>
 
 
 <script>

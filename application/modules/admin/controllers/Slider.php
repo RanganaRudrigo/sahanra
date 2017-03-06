@@ -23,9 +23,9 @@ class Slider extends MY_Controller
             'records' => $this->model->order_by('OrderNo')->get_all() ,
             'obj' => $this->obj
         ];
-        $this->form_validation->set_rules("form[SliderTitle]","Slider Name","required");
+//        $this->form_validation->set_rules("form[SliderTitle]","Slider Name","required");
         $this->form_validation->set_rules("form[Image]","Slider Name","required");
-        $this->_form($d,$SliderId,[]);
+        $this->_form($d,$SliderId,["image"=>"MoreImage",'video'=>"YoutubeUrl"]);
     }
 
 

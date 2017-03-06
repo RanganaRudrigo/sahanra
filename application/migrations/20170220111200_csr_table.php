@@ -1,6 +1,6 @@
 <?php
 
-class Migration_Crs_table extends CI_Migration
+class Migration_Csr_table extends CI_Migration
 {
     public function __construct()
     {

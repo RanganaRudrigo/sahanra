@@ -17,6 +17,7 @@ class Home extends CI_Controller
 
                 if(is_object($user)) {
                     $this->session->set_userdata("user",$user);
+                    $this->session->set_userdata("lang",'en');
                     if($this->session->userdata('url'))
                         redirect($this->session->userdata('url'));
                     redirect(base_url('admin'));
@@ -52,5 +53,13 @@ class Home extends CI_Controller
         echo $content;
         exit();
     }
-  
+
+    function lag($lag){
+        if(in_array($lag,['en','tn','si'])){
+            $this->session->set_userdata("lang",$lag);
+        }else
+            $this->session->set_userdata("lang",'en');
+        redirect(base_url('admin'));
+    }
+
 }

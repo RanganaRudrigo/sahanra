@@ -4,6 +4,9 @@ include_once APPPATH."modules/admin/core/MY_Controller.php" ;
 class News extends MY_Controller
 {
     var $page = "news";
+    var $crop_maintain_ratio = FALSE ,
+        $crop_width = 360 ,
+        $crop_height = 300 ;
 
     function __construct()
     {

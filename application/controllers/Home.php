@@ -4,7 +4,25 @@ class Home extends Front_Controller
 {
 
     function index(){
- 
+
+        redirect(base_url('en'));
+        // Slider 
+        $this->load->model('slider_model','slider');
+        $d['sliders'] = $this->slider->order_by('OrderNo')->get_all();
+        
+        // Success stories
+        $this->load->model('story_model','story');
+        $d['stories'] = $this->story->order_by('OrderNo')->get_all();
+
+        // Latest 2 News
+        $this->load->model('news_model','news');
+        $d['news'] = $this->news->order_by('OrderNo')->limit(2)->get_all();
+
+        // Testimonials
+        $this->load->model('testimonial_model','testimonial');
+        $d['testimonials'] = $this->testimonial->order_by('OrderNo')->get_all();
+
+        $this->view('index',$d);
     }
  
     function contact(){
@@ -49,7 +67,65 @@ class Home extends Front_Controller
         
         $this->view('contact_us',$d);
     }
- 
+
+    function overview_and_objectives(){
+
+        $this->view('about/overview_and_objectives');
+    }
+
+    function Chairman_Message(){
+
+        $this->view('about/Chairman_Message');
+    }
+    
+    function Board_of_Directors(){
+
+        $this->view('about/Board_of_Directors');
+    }
+
+    function Our_Subsidiaries(){
+
+        $this->view('about/Our_Subsidiaries');
+    }
+
+    function Milestones(){
+
+        $this->view('about/Milestones');
+    }
+
+    function CSR(){
+        $this->load->model('csr_model','csr');
+        $d['csrs'] = $this->csr->order_by('OrderNo')->get_all() ;
+        $this->view('about/CSR',$d);
+    }
+
+    function Product_And_Services(){
+        $this->load->model('product_model','product');
+        $d['products'] = $this->product->order_by('OrderNo')->get_all() ;
+        $this->view('products',$d);
+    }
+
+
+    function Partners(){
+        $this->view('Partners');
+    }
+
+    function Success_Stories(){
+        $this->load->model('story_model','story');
+        $d['stories'] = $this->story->order_by('OrderNo')->get_all() ;
+        $this->view('Success_Stories',$d);
+    }
+    function Success_Stories_detail($_id){
+        $this->load->model('story_model','story');
+        $d['story'] = $this->story->get($_id) ;
+        if(is_object($d['story'])){
+            $d['stories'] = $this->story->order_by('OrderNo')->get_many_by(['StoryId!='=>$_id]) ;
+            $this->view('Success_Stories_detail',$d);
+        }else{
+            show_404();
+        }
+    }
+
 
     function error_404(){
         $this->view('404');

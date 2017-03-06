@@ -28,4 +28,18 @@ class Api extends REST_Controller
         }
     }
 
+    function uploaded_images_get(){
+        $extensions = array('jpg', 'jpeg', 'png', 'gif');
+        $dir = FCPATH.'media/img/thumbs' ;
+        $d['images'] = [];
+        if ($dh = opendir($dir)) {
+            while (($file = readdir($dh)) !== false) {
+                if (in_array(pathinfo($file, PATHINFO_EXTENSION),$extensions ) && is_file($dir . "/" . $file)) {
+                    $d['images'][] = $file;
+                }
+            }
+        }
+        $this->response( array_reverse($d['images']) );
+    }
+
 }

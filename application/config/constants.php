@@ -85,14 +85,15 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
-define("TITLE","Sahanra");
-define("title",TITLE);
+define("TITLE","Sahanra Capital Corporation Limited");
+define("title",'Sahanra');
 
 
 if( @end(explode('.',$_SERVER['SERVER_NAME'])) == 'dev'){
-    
     define('HOST', 'localhost');
     define('DB', 'sahanra');
+    define('DB_TN', 'sahanra_tn');
+    define('DB_SI', 'sahanra_si');
     define('USERNAME', 'root');
     define('PASSWORD', 'mart1234');
     define('DOMAIN', "http://{$_SERVER['SERVER_NAME']}");
@@ -111,4 +112,5 @@ define('UPT', DOMAIN."/media/img/thumbs/");
 define('JS', DOMAIN."/js/");
 define('LIMIT', "6");
 define('VER', "0.1");
-define('EMAIL', 'almashriqtours.com@gmail.com');
+define('EMAIL', 'info@sahanaracapital.lk');
+

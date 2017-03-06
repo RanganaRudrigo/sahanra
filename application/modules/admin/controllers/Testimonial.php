@@ -4,8 +4,9 @@ include_once APPPATH."modules/admin/core/MY_Controller.php" ;
 
 class Testimonial extends MY_Controller
 {
-    var $page = "testimonial";
-
+    var $page = "testimonial",
+        $width = 70 ,
+        $height = 70 ;
     function __construct()
     {
         parent::__construct();

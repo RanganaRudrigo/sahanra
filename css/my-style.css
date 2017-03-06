@@ -1,0 +1,323 @@
+
+
+.my-inner-heading-field {
+    padding: 20px 0;
+    background-color: #252525;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: left;
+}
+
+.head-text { text-align: right; padding: 20px 0; }
+.my-layer-black {
+    position: relative;
+}
+.my-layer-black:before {
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.my-inner-heading-field h1 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.my-inner-heading-field ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.my-inner-heading-field ul li a {
+    color: #ffffff;
+
+
+}
+
+.my-inner-heading-field ul li .active {
+    color: #d4000e;
+}
+
+.my-inner-about {
+    padding-top: 180px;
+    overflow: hidden;
+}
+
+.my-about-two {
+    padding: 100px 0 70px;
+}
+
+.my-about-two .my-about-col {
+    margin-bottom: 30px;
+}
+
+.my-about-two .my-about-col .my-top-img {
+    position: absolute;
+    right: -14%;
+    top: -22%;
+    opacity: .8;
+    z-index: 99;
+}
+
+.my-about-two .my-about-col {
+    margin-bottom: 30px;
+}
+.my-about-two .my-about-col h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.my-about-two .my-about-col p {
+    margin-bottom: 40px;
+}
+
+.my-about-two .my-about-col .my-about-list li {
+    margin-bottom: 20px;
+}
+
+.my-about-field {
+    padding: 100px 0 70px;
+}
+
+.about-img-column {
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.my-img-fluided {
+    width: 100%;
+}
+.about-img-column:hover .layer {
+    bottom: 0;
+    background: rgba(72, 143, 225, 0.9);
+}
+
+.about-img-column .layer {
+    height: 30%;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.about-img-column .layer .img-col-content {
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.about-img-column .layer .img-col-content .title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.about-img-column .layer .img-col-content p {
+    color: #ffffff;
+}
+
+.my-team-field {
+    padding: 100px 0 70px;
+}
+
+.my-team-field .my-team-col {
+    margin-bottom: 30px;
+}
+
+.my-team-col .thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.my-team-col .thumb img {
+    max-width: 100%;
+}
+
+.my-img-fluided {
+    width: 100%;
+}
+
+.my-team-col .thumb .layer {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 135px 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background: rgba(72, 143, 225, 0.4);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.my-team-col .thumb .thumb-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    height: 20%;
+    left: 0;
+    padding: 15px 20px 10px;
+    position: absolute;
+    right: 0;
+}
+.my-team-col .thumb .thumb-content .title {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.my-team-col .thumb .thumb-content .sub-title {
+    font-size: 12px;
+    line-height: 13px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #488fe1;
+}
+.my-team-col .icon {
+    bottom: 20%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.my-team-col .icon .icon-plus {
+    background: black none repeat scroll 0 0;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+}
+
+.my-team-col .icon .team-icons {
+    bottom: 30px;
+    padding-bottom: 10px;
+    position: absolute;
+    right: -40px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.my-team-col .icon .team-icons li {
+    background: black none repeat scroll 0 0;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 40px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.my-team-col .icon .team-icons li a {
+    color: #ffffff;
+}
+
+.my-inner-blog-field {
+    padding: 100px 0 70px;
+}
+
+.my-inner-blog-field .my-blog-col {
+    margin-bottom: 30px;
+}
+
+.my-blog-box {
+    margin-bottom: 60px;
+}
+.my-blog-box img {
+    margin-bottom: 20px;
+}
+
+.my-blog-heading-row .my-blog-date {
+    float: left;
+}
+
+.my-blog-date {
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    margin-right: 20px;
+    background: #488FE1;
+    text-align: center;
+}
+
+.my-post {
+    padding-top: 15px;
+}
+
+.my-inner-blog-field .my-blog-col {
+    margin-bottom: 30px;
+}
+
+.my-tab-widget {
+    margin-bottom: 50px;
+}
+
+.my-sidebar-title {
+    margin-bottom: 30px;
+}
+.my-sidebar-title h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.my-tab-widget .nav-tabs {
+    border: none;
+    text-align: center;
+}
+
+.my-tab-widget .tab-content {
+    border: none;
+    padding-left: 0;
+}
+
+.tab-content {
+    padding: 15px;
+    border: 1px solid #eeeeee;
+}
+.tab-content>.active {
+    display: block;
+}
+.my-tab-content {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 118px;
+    border-bottom: 1px solid #DEE5E9;
+}
+
+.my-tab-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.my-tab-content p {
+    color: #000000;
+    font-weight: 600;
+    padding-top: 15px;
+}

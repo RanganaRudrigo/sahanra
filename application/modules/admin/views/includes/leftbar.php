@@ -5,11 +5,6 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <ul>
-
-                <li class="has_sub">
-                    <a href="<?= base_url('admin') ?>" class="waves-effect">
-                        <i class="zmdi zmdi-view-dashboard"></i><span> Dashboard </span> </a>
-                </li>
                 <li class="has_sub">
                     <a href="<?=base_url('admin/csr')?>" class="waves-effect">
                         <i class="ion ion-folder"></i>
@@ -64,54 +59,30 @@
                 </li>
                 <li class="has_sub">
                     <a href="<?=base_url('admin/career')?>" class="waves-effect">
-                        <i class="fa fa-image"></i>
+                        <i class="fa fa-file"></i>
                         <span> Career </span>
                     </a>
                 </li>
                 <li class="has_sub">
                     <a href="<?=base_url('admin/download_link')?>" class="waves-effect">
-                        <i class="fa fa-image"></i>
+                        <i class="fa fa-download"></i>
                         <span> Download </span>
                     </a>
                 </li>
-<!--
-                <li class="has_sub">
-                    <a href="<?/*=base_url('admin/destinations')*/?>" class="waves-effect">
-                        <i class="ion ion-map"></i>
-                        <span> Destination </span> </a>
-                </li>
-
-                <li class="has_sub">
-                    <a href="<?/*=base_url('admin/banner')*/?>" class="waves-effect">
-                        <i class="fa fa-image"></i>
-                        <span> Banner </span>
-                    </a>
-                </li>
-                <li class="has_sub">
-                    <a href="<?/*=base_url('admin/gallery')*/?>" class="waves-effect">
-                        <i class="fa fa-image"></i>
-                        <span> Gallery </span>
-                    </a>
-                </li>
-                <li class="has_sub">
-                    <a href="<?/*=base_url('admin/tours')*/?>" class="waves-effect">
-                        <i class="fa fa-bookmark"></i>
-                        <span> Tour </span>
-                    </a>
-                </li>
-
-                <li class="has_sub">
-                    <a href="<?/*=base_url('admin/offer')*/?>" class="waves-effect">
-                        <i class="fa fa-star"></i>
-                        <span> Special Offer </span>
-                    </a>
-                </li>-->
 
                 <li class="has_sub">
                     <a href="<?=base_url('admin/home/subscribe')?>"  >
+                        <i class="fa fa-download"></i>
                         <span> Subscribe </span>
                     </a>
                 </li>
+                <li class="has_sub">
+                    <a href="<?=base_url('admin/upload')?>" class="waves-effect">
+                        <i class="fa fa-image"></i>
+                        <span> Image Uploader </span>
+                    </a>
+                </li>
+
             </ul>
             <div class="clearfix"></div>
         </div><!--- Sidemenu -->

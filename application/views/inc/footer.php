@@ -1,142 +1,184 @@
-<footer>
-    <div class="column-container">
-        <div class="container">
+<footer class="footer">
+    <div class="container extraspace">
+        <div class="row">
 
-            <div class="col-md-3 col-sm-3">
-                <div class="footer-column margin-responsive">
-                    <div class="title">
-                        <h4 class="underlined-heading">Contact Us</h4>
-                    </div>
-                    <div class="content">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <i class="pe-7s-map-marker pe-2x"></i>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <p>Lewis place negombo
-                                    Negombo</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <i class="pe-7s-phone pe-2x"></i>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <p> +94 77 998 4609</p>
-                                <p>+94 77 998 4609</p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <i class="pe-7s-mail pe-2x"></i>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <p>info@mbstravels</p>
+            <div class="col-xs-12 col-sm-6 col-md-3-2 extspc">
 
-                            </div>
-                        </div>
-                    </div><!--/.content -->
-                </div><!--/.footer-column -->
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="footer-column margin-responsive footer-menu">
-                    <div class="title">
-                        <h4 class="underlined-heading">Menu</h4>
-                    </div>
-
-                    <ul>
-                        <li> <a href="<?=base_url()?>">Home</a></li>
-                        <li><a href="<?= base_url('About-us') ?>">About Us</a></li>
-                        <li><a href="<?= base_url('tours') ?>">Tours</a></li>
-                        <li> <a href="<?= base_url('About-SriLanka') ?>">About Sri Lanka</a></li>
-                        <li><a href="<?= base_url('gallery') ?>">Gallery</a></li>
+                <div class="widget tag">
+                    <h5 class="widget-title">Menu</h5>
+                    <ul class="list-icon square-style list-border foter-usful-link">
+                        <li><a href="<?=base_url()?>">Home</a></li>
+                        <li><a href="<?= ABOUT_US ?>">About Us</a></li>
+                        <li><a href="<?=PRODUCT_SERVICES?>">Product and Services</a></li>
+                        <li><a href="<?=PARTNERS?>">Partners</a></li>
+                        <li><a href="<?=SUCCESS_STORIES?>">Success Stories</a></li>
+                        <li><a href="<?=NEWS?>">Latest News</a></li>
+                        <li><a href="<?=EVENTS?>">Events</a></li>
+                        <li><a href="<?=GALLERY?>">Gallery</a></li>
+                        <li><a href="<?=PUBLICATION?>">Publication</a></li>
+                        <li><a href="<?=TESTIMONIAL?>">Testimonials</a></li>
+                        <li><a href="<?=PRIVACY_POLICY?>">Privacy Policy</a></li>
+                        <li><a href="<?=CAREER?>">Careers</a></li>
+                        <li><a href="<?=CONTACT_US?>">Contact Us</a></li>
                     </ul>
-
-                </div><!--/.footer-column -->
+                </div>
             </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="footer-column margin-responsive footer-menu">
-                    <div class="title" style="margin-bottom: 44px" >
-                        <h4 class="">&nbsp;</h4>
-                    </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
 
-                    <ul>
-                        <li><a href="<?= base_url('destination') ?>">Destination</a></li>
-                        <li><a href="<?= base_url('Tailor-made-holiday') ?>">Tailor Made Holiday</a></li>
-                        <li><a href="<?= base_url('Testimonial') ?>">Testimonials</a></li>
-                        <li><a href="<?= base_url('Special-Offers') ?>">Special Offers</a></li>
-                        <li><a href="<?= base_url('Contact-us') ?>">Contact Us</a></li>
+                <div class="widget tag ">
+                    <h4 class="widget-title">Latest News</h4>
+                </div>
+                <?php foreach ($footer['news'] as $value): ?>
+                    <div class="widget news-widget border-bottom-blue">
+                        <div class="post-content">
+                            <h6 class="post-title"><?=$value->NewsTitle?></h6>
+                            <p><?= character_limiter($value->ShortDescription,80) ?></p>
+                            <a class="post-date" href="#"><?= date('d M, Y',strtotime($value->NewsDate)) ?></a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 extspc">
+
+                <div class="widget tag">
+                    <h5 class="widget-title">Downloads</h5>
+                    <ul class="list-icon square-style list-border foter-usful-link">
+                        <?php foreach ($footer['downloads'] as $value): ?>
+                            <li><a target="_parent" href="<?= UP.$value->DownloadFile  ?>"><?= $value->DownloadTitle  ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
-
-                </div><!--/.footer-column -->
-            </div>
-            <div class="col-md-3 col-sm-3 contact-us">
-                <div class="footer-column margin-responsive">
-                    <div class="title">
-                        <h4 class="underlined-heading">Subscribe</h4>
+                </div>
+                <div class="widget social-feed">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-rss rss-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Subscribe</div>
+                                    <div class="sub-title">to RSS Feed</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-twitter twitt-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Follow Us</div>
+                                    <div class="sub-title">on Twitter</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-facebook facebk-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Find Us</div>
+                                    <div class="sub-title">on Facebook</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-google-plus gplus-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Find Us</div>
+                                    <div class="sub-title">on Google+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-pinterest pin-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Follow Us</div>
+                                    <div class="sub-title">on Pinterest</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="feed-widget"> <a href="#"><i class="fa fa-dribbble drbl-color" aria-hidden="true"></i></a>
+                                <div class="social-link">
+                                    <div class="title">Follow Us</div>
+                                    <div class="sub-title">on Dribbble</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <p>Marsh mallow muffin soufflé jelly-o tart cake Marsh mallow macaroon jelly jubes dont dragee ice cream dessert </p>
-                        <span id="subscribe-success" style="display: none" class="text-success" > Thank you for Subscribe US </span>
-                        <span id="subscribe-error" style="display: none" class="text-danger" >  </span>
-                        <form id="subscribe" class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="email" name="Email" required class="form-control def-input" placeholder="Your Email">
-                                    <div class="input-group-btn">
-                                        <button   class="def-btn btn-solid">Send</button>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 spacingd">
+                <div class="widget footer-logo border-bottom-blue">
+                    <h5 class="widget-title">Contact Us</h5>
+                    <div class="widget social-feed">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-map rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
+
+                                        <div class="sub-title">'ABC Court' 117, Hunupitiya Lake Road, Colombo - 02, Sri Lanka.</div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div><!--/.content -->
-                </div><!--/.footer-column -->
-            </div><!--/.contact-us -->
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-phone rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
 
-        </div><!--/.container -->
-    </div><!--/.column-container -->
+                                        <div class="sub-title">+94 112 438 951 / +94 112 430 170</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-fax rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
 
-    <div class="copyright col-md-12 no-h-padding">
-        <div class="left-section col-md-6 col-sm-6"></div>
-        <div class="container content-wrap">
-            <div class="content">
-                <div class="col-md-6 col-sm-6 col-xs-6 left-content">MBS Travels & Tours Sri Lanka &copy; All Right Reserved  | Powered by IT MARTX</div>
-                <div class="col-md-6 col-sm-6 col-xs-6  right-content text-right">
-                    <div class="social-media">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <div class="sub-title"> +94 112 438 956 / +94 112 446 117</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-envelope rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
 
+                                        <div class="sub-title"> info@sahanracapital.lk</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-envelope rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
+
+                                        <div class="sub-title">www.sahanracapital.lk</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12">
+                                <h4 style=" color:#fff;">Branch</h4>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-map rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
+
+                                        <div class="sub-title">202, Ambagamuwa, Gampola, Sri Lanka. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="feed-widget"> <a href="#"><i class="fa fa-phone rsss-color" aria-hidden="true"></i></a>
+                                    <div class="social-link">
+
+                                        <div class="sub-title">+94 112 438 951 / +94 112 430 170</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div><!--/.content -->
-        </div><!--/.content-wrap -->
-    </div><!--/.copyright -->
-</footer>
 
-<script>
-    $(function () {
-        $('#subscribe').submit(function (e) {
-            e.preventDefault();
-            var form = $(this);
-            $.ajax({
-                url : '<?= base_url('api/subscribe') ?>',
-                data : form.serializeArray() ,
-                dataType: 'json',
-                success : function (json) {
-                    if(json['hasError']) {
-                        $('#subscribe-error').html(json['Error']).show('slow').fadeOut(3000);
-                    }else{
-                        $('#subscribe-success').show('slow').fadeOut(3000).val("");
-                    }
-                }
-            });
-        });
-    })
-</script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copy-right">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center tac-smd">
+                <p class="copyright">Copyright 2017 Sahanra Capital Corporation Limited All Rights Reserved.   |  Powered by IT MARTX </p>
+            </div>
+        </div>
+    </div>
+</footer>

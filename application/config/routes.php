@@ -52,31 +52,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 
-
-
-
 $route['404_override'] = 'home/error_404';
 $route['translate_uri_dashes'] = FALSE;
- 
-$route['destination'] = 'home/destination_list';
-$route['destination/(.+)/(.+)'] = 'home/destination_detail/$2';
-$route['tours'] = 'home/tour_list';
-$route['tours/(.+)/(.+)'] = 'home/tour_list/$2';
-$route['tour/(.+)/(.+)'] = 'home/tour_detail/$2';
-
-$route['Contact-us'] = 'home/contact';
-$route['About-us'] = 'home/about';
-$route['About-SriLanka'] = 'home/about_srilanka';
-$route['Testimonial'] = 'home/testimonial';
-$route['Special-Offers'] = 'home/offer';
-$route['gallery'] = 'home/gallery';
-$route['gallery/(.+)/(.+)'] = 'home/gallery_detail/$2';
-$route['Tailor-made-holiday'] = 'home/tailor_made_holiday';
-$route['About-SriLanka/bliss'] = 'home/bliss';
-$route['About-SriLanka/essence'] = 'home/essence';
-$route['About-SriLanka/festive'] = 'home/festive';
-$route['About-SriLanka/heritage'] = 'home/heritage';
-$route['About-SriLanka/pristine'] = 'home/pristine';
-$route['About-SriLanka/scenic'] = 'home/scenic';
-$route['About-SriLanka/thrills'] = 'home/thrills';
-$route['About-SriLanka/wild'] = 'home/wild';

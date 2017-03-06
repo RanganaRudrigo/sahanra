@@ -1,89 +1,69 @@
-<!-- Navbar Start -->
-<div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-fixed-top megamenu">
-        <div class="top-content">
-            <div class="container">
-                <ul>
-                    <li>
-                        <i class="pe-7s-map-marker"></i>
-                        Lewis place negombo Negombo
-                    </li>
-                    <li>
+<header class="header-package">
+    <div class="header-top-sector">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-2">
+                <div class="widget contact-num left-1">
+                    <ul class="list-inline">
+                        <li><a href="callto:+94112438951"><i class="fa fa-phone"></i>+94 112 438 951</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3-1">
+                <div class="widget contact-num left-1">
+                    <ul class="list-inline">
+                        <li><a href="mailto:<?=EMAIL?>"><i class="fa fa-envelope"></i><?=EMAIL?></a></li>
+                    </ul>
+                </div>
+            </div>
 
-                        <i class="pe-7s-call"></i>
-                        +94 77 998 4609
-                    </li>
-                    <li>
-                        <i class="pe-7s-mail"></i>
-                        info@mbstravels
-                    </li>
-                </ul>
-                <ul class="pull-right" style="padding-right: 0;" >
-                    <li>
-                        <a href="<?= base_url() ?>" ><i class="fa fa-home"></i>
-                            Home</a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url('Testimonial') ?>" > Testimonial </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url('Contact-us') ?>" ><i class="fa fa-phone"></i>
-                            Contact Us</a>
-                    </li>
-                </ul>
+            <div class="col-xs-12 col-sm-12 col-md-8-1">
+                <div class="widget langu pull-right spacing">
+                    <ul class="list-inline lang-cart">
+                        <li><a class="carts-icon" href="<?=base_url()?>">Home</a> &nbsp;&nbsp; | <a class="carts-icon" href="<?=CONTACT_US?>">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li class="border-right-two">
+                            <div class="dropdown">
+                                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdownMenu1" type="button" class="btn read-more-btn-two btn-sm lang dropdown-toggle">
+                                    English <span class="caret"></span>
+                                </button>
+                                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                                    <li><a href="#"> Sinhala</a></li>
+                                    <li><a href="#"> Tamil</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- Navbar Begin -->
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand no-effect" href="<?= base_url() ?>"><img src="<?=base_url()?>images/logo.png" alt=""></a>
-            </div><!--/.navbar-header -->
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="">
-                        <a href="<?= base_url() ?>"  >Home</a>
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('About-SriLanka') ?>" >About Sri Lanka</a>
 
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('tours') ?>"  >Tours</a>
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('destination') ?>" >Destination</a>
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('gallery') ?>"  >Gallery</a>
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('About-us') ?>"  >About Us</a>
-                    </li>
-                    <li class="">
-                        <a href="<?= base_url('Tailor-made-holiday') ?>"  >Tailor Made Holiday</a>
-                    </li>
 
-                </ul><!--/.navbar-nav -->
-            </div><!--/.nav-collapse -->
+
+    <div class="header-nav">
+        <div class="main-header-nav scrollingto-fixed">
+            <div class="container">
+                <nav id="menuzord" class="menuzord blue"> <a href="<?=base_url()?>" class="menuzord-brand"><img src="<?=base_url()?>images/header-logo.png" alt=""></a>
+                    <ul class="menuzord-menu">
+                        <li><a href="#">About Us</a>
+                            <ul class="dropdown">
+                                <li><a href="<?= base_url(ABOUT_US) ?>">Overview & Objectives</a></li>
+                                <li><a href="<?= base_url(ABOUT_US_CHAIRMAN) ?>">Chairman Message </a></li>
+                                <li><a href="<?= base_url(ABOUT_US_BOARD_DIRECTORS) ?>">Board of Directors</a></li>
+                                <li><a href="<?= base_url(ABOUT_US_OUR_SUBSIDIARIES) ?>">Our Subsidiaries</a></li>
+                                <li><a href="<?= base_url(ABOUT_US_MILESTONES) ?>">Milestones</a></li>
+                                <li><a href="<?= base_url(ABOUT_US_CSR) ?>">CSR</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?= base_url(PRODUCT_SERVICES) ?>">Product and Services</a></li>
+                        <li><a href="<?= base_url(PARTNERS) ?>">Partners</a></li>
+                        <li><a href="<?= base_url(SUCCESS_STORIES) ?>">Success Stories</a></li>
+                        <li><a href="<?= base_url(PUBLICATION) ?>">Publication</a></li>
+                        <li><a href="<?= base_url(CAREER) ?>">Careers</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </nav><!-- /.megamenu -->
-</div>
-<!-- Navbar End -->
-
-<script>
-    $(function () {
-        $("#navbar a").each(function() {
-            if(location.href == this.href){
-                $(this).parent().addClass('active');
-            }
-        });
-
-    })
-</script>
+    </div>
+</header>

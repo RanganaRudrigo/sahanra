@@ -4,6 +4,9 @@ include_once APPPATH."modules/admin/core/MY_Controller.php" ;
 class Story extends MY_Controller
 {
     var $page = "story";
+    var $crop_maintain_ratio = FALSE ,
+        $crop_width = 572 ,
+        $crop_height = 422 ;
 
     function __construct()
     {
@@ -26,12 +29,11 @@ class Story extends MY_Controller
         $this->_form($d,$PackageId,['image'=>'MoreImage','youtube'=>'YoutubeUrl']);
     }
 
-    function crop($data){
-        $this->load->library('image_lib', []);
-        $this->image_lib->clear();
-    }
-
-
+     function crop($data)
+     {
+         $this->load->library('image_lib', []);
+         $this->image_lib->clear();
+     }
 
 
 }

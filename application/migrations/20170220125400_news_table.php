@@ -21,6 +21,9 @@ class Migration_News_table extends CI_Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255
             ] ,
+            "NewsDate" => [
+                'type' => 'DATE' 
+            ] ,
             "Image" => [
                 'type' => 'VARCHAR',
                 'constraint' => 255

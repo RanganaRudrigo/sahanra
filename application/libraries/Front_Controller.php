@@ -16,20 +16,16 @@ class Front_Controller extends CI_Controller
     }
 
     function view($page,$data=[]){
-        if(!isset($this->tour))
-            $this->load->model('tours_model','tour');
-        if(!isset($this->destination))
-            $this->load->model('destinations_model','destination');
-        if(!isset($this->testimonial))
-            $this->load->model('testimonial_model','testimonial');
-        
-        $d =[ 
-            'tours' => $this->tour->select('TourTitle,TourId')->order_by('OrderNo')->limit(10)->get_all(),
-            'destinations' => $this->destination->select('DestinationTitle,DestinationId')->order_by('OrderNo')->limit(10)->get_all(),
-            'testimonials' => $this->testimonial->select('TestimonialTitle,TestimonialId,Image,ShortDescription')->order_by('OrderNo')->limit(3)->get_all(),
-        ] ;
 
-        $data['footer'] = $d ;
+        if(!isset($this->download))
+            $this->load->model('download_model','download');
+        if(!isset($this->news))
+            $this->load->model('news_model','news');
+
+        $data['footer'] = [
+            'downloads' => $this->download->order_by("OrderNo")->limit(6)->get_all() ,
+            'news' => $this->news->order_by("OrderNo")->limit(3)->get_all()
+        ] ;
 
         $this->load->view($page,$data);
     }
